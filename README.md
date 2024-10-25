@@ -6,6 +6,9 @@ The Enhanced Touch API raises events `onFingerDown`, `onFingerMove`, and `onFing
 
 [![Youtube Tutorial](./Video%20Screenshot.jpg)](https://youtu.be/MKnLPA5hnPA)
 
+## Important Note
+Starting with Unity 2022 simply doing EnhancedTouch.Enable() is not sufficient to enable touch simulation. A difference in this repository versus the video above is we have attached a `TouchSimulation.cs` script (that comes from the input system package) that enables the touch simulation.
+
 ## Patreon Supporters
 Have you been getting value out of these tutorials? Do you believe in LlamAcademy's mission of helping everyone make their game dev dream become a reality? Consider becoming a Patreon supporter and get your name added to this list, as well as other cool perks.
 Head over to https://patreon.com/llamacademy to show your support.

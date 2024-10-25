@@ -17,7 +17,7 @@ public class PlayerTouchMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        EnhancedTouchSupport.Enable();
+        EnhancedTouchSupport.Enable(); // starting with Unity 2022 this does not work! You need to attach a TouchSimulation.cs script to your player
         ETouch.Touch.onFingerDown += HandleFingerDown;
         ETouch.Touch.onFingerUp += HandleLoseFinger;
         ETouch.Touch.onFingerMove += HandleFingerMove;
@@ -28,7 +28,7 @@ public class PlayerTouchMovement : MonoBehaviour
         ETouch.Touch.onFingerDown -= HandleFingerDown;
         ETouch.Touch.onFingerUp -= HandleLoseFinger;
         ETouch.Touch.onFingerMove -= HandleFingerMove;
-        EnhancedTouchSupport.Disable();
+        EnhancedTouchSupport.Disable(); // You need to attach a TouchSimulation.cs script to your player
     }
 
     private void HandleFingerMove(Finger MovedFinger)
